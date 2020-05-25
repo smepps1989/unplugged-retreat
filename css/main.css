@@ -124,11 +124,10 @@ footer {
   padding: 20px;
 }
 
-.content-wrapper img {
-  width: 80%;
+header .logo  {
+  width: 60%;
   height: auto;
-  justify-content: center;
-  align-items: center;
+  margin-left: 70px;
 }
 nav {
   display: flex;
@@ -150,18 +149,17 @@ h1, h2, h3 {
 }
 h1 {
   font-size: 1.875em;
-  line-height: 30px;
 }
 
 h3 {
   font-size: 1.125em;
 }
- p {
+p {
    font-size: 0.875em;
    font-weight: lighter;
  }
 
- .contact h3, .social-media h3 {
+.contact h3, .social-media h3 {
    text-align: center;
  }
 .social-media img {
@@ -190,18 +188,28 @@ aside {
    align-items: center;
    text-align: center;
    background-image: url('../img/features-back.jpg');
-   background-position: center; 
+   background-position: center;
+   background-repeat: no-repeat; 
  }
+ .features article {
+   width: 50%;
+   padding: 0px 85px;
+ }
+  .features article p {
+    text-align: center;
+  }
 
  .reviews {
    background-color: #2a423a;
-
  }
 
- .team-photo img {
+ .reviews figure {
    width: 100%;
-   justify-content: center;
-   align-items: center;
+   margin: 0;
+
+ }
+ .reviews img {
+   width: 100%;
  }
 
 

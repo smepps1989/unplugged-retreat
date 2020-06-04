@@ -102,7 +102,6 @@ html {
   font-size: 16px;
 }
 body {
-  max-width: 768px;
   font-size: 1em;
   font-family: 'Opens Sans', sans-serif;
   font-weight: normal;
@@ -123,45 +122,46 @@ footer {
   flex-flow: column wrap;
   padding: 20px;
 }
-
 header .logo  {
   width: 60%;
   height: auto;
-  margin-left: 70px;
+  padding-left: 70px;
 }
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+nav ul {
+  padding: 0;
 }
 nav ul li, a {
   list-style: none;
   display: inline;
   text-decoration: none;
   text-transform: uppercase; 
-  justify-content: space-around;
   font-size: 1.125em;
+  font-weight: bold;
 }
-h1, h2, h3 {
+h1, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
   text-align: left;
 }
-h1 {
+#hero-area h1 {
   font-size: 1.875em;
 }
-
 h3 {
   font-size: 1.125em;
 }
 p {
-   font-size: 0.875em;
-   font-weight: lighter;
- }
-
+  font-size: 0.875em;
+  font-weight: lighter;
+}
 .contact h3, .social-media h3 {
-   text-align: center;
- }
+  text-align: center;
+}
 .social-media img {
   flex-direction: row;
 }
@@ -170,58 +170,56 @@ font-style: normal;
 font-size: 0.875em;
 font-weight: lighter;
 }
+
 /*Home Page*/
-.hero-area {
+#hero-area {
   background-image: url('../img/hero.jpg');
   background-size: cover;
   height: 500px;
   background-position: center;
 }
- 
 aside {
   background-color: #527158;
 }
-
- .features {
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   background-image: url('../img/features-back.jpg');
-   background-position: center;
-   background-repeat: no-repeat; 
- }
- .features article {
-   width: 50%;
-   padding: 0px 85px;
- }
-  .features article p {
-    text-align: center;
-  }
-
- .reviews {
-   background-color: #2a423a;
- }
-
- .reviews figure {
-   width: 100%;
-   margin: 0;
-
- }
- .reviews img {
-   width: 100%;
- }
-
+.form-description, .sign-up {
+  width: auto;
+}
+#features {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../img/features-back.jpg');
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+#features article {
+  width: 50%;
+  padding: 0px 85px;
+}
+#features p {
+  text-align: center;
+}
+#reviews {
+  background-color: #2a423a;
+}
+#reviews figure {
+  width: 100%;
+  margin: 0;
+}
+#reviews img {
+  width: 100%;
+}
 
 /*FAQS Page*/
 #faq {
   background-color: #527158;
 }
 /*About Page*/
-.mission {
+#mission {
   background-color: #527158;
 }
-.contact-section {
+#contact-section {
   background-color: #2a423a;
 }
 /* ==========================================================================
@@ -313,15 +311,112 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+@media only screen and (min-width: 768px) {
+  /*Tablet Styles*/
+  /**Base Styles**/
+  .content-wrapper {
+    flex-flow: row wrap;
+    padding: 0px 65px;
+    justify-content: space-around;
+  }
+  header {
+    padding: 40px 0px;
+  }
+  header .logo {
+    width: 40%;
+    padding-left: 0px;
+  }
+  .header-divider {
+    width: 230px;
+  }
+  nav {
+  width: 20%;
+  }
+  .contact {
+    width: 50%;
+  }
+  .social-media {
+    width: 50%;
+  }
+ .copyright p {
+   padding: 0px 200px;
+  }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+  /**Home**/
+  #hero-area h1 {
+    font-size: 3em;
+  }
+  .form-description, .sign-up {
+    width: 40%;
+  }
+  .form-description { 
+    margin-right: auto;
+  }
+  #features article {
+    flex-basis: 20%
+  }
+  #features, #reviews {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  #reviews h1 {
+    width: 100%;
+  }
+  #reviews figure {
+    flex-basis: 50%;
+  }
+  .review {
+    flex-basis: 45%;
+    margin-left: 20px;
+  }
+  .review h3 {
+    margin-top: 0px;
+  }
+
+  /**FAQS**/
+  nav ul li {
+    font-size: 1em;
+  }
+  #faq {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+  #faq h1 {
+    flex-basis: 95%;
+  }
+  #faq article {
+    flex-basis: 45%;
+  }
+  .question {
+    font-weight: normal;
+  }
+  .answer {
+    font-family: 'Poppins', sans-serif;
+  }
+  /**About**/
+  #mission h1 {
+    font-size: 2.25em;
+  }
+  .mission-content {
+    width: 45%;
+  }
+  #mission .mission-content p {
+    width: 100%;
+  }
+  #mission, #contact-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  #contact-section h1 {
+    font-size: 2.25em;
+  }
+  .contact-info {
+    text-align: left;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+            /*Desktop Styles*/
 }
 
 /* ==========================================================================

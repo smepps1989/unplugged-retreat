@@ -106,7 +106,6 @@ body {
   font-family: 'Opens Sans', sans-serif;
   font-weight: normal;
   color: #e2e3ed;
-
 }
 header,
 footer {
@@ -148,6 +147,7 @@ h1, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: normal;
   text-align: left;
+  width: 100%
 }
 #hero-area h1 {
   font-size: 1.875em;
@@ -170,7 +170,9 @@ font-style: normal;
 font-size: 0.875em;
 font-weight: lighter;
 }
-
+.copyright {
+  width: 100%;
+}
 /*Home Page*/
 #hero-area {
   background-image: url('../img/hero.jpg');
@@ -317,7 +319,7 @@ aside {
   .content-wrapper {
     flex-flow: row wrap;
     padding: 0px 65px;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   header {
     padding: 40px 0px;
@@ -331,6 +333,9 @@ aside {
   }
   nav {
   width: 20%;
+  }
+  footer {
+    padding-top: 35px;
   }
   .contact {
     width: 50%;
@@ -348,9 +353,7 @@ aside {
   }
   .form-description, .sign-up {
     width: 40%;
-  }
-  .form-description { 
-    margin-right: auto;
+    padding: 50px 0px;
   }
   #features article {
     flex-basis: 20%
@@ -416,7 +419,38 @@ aside {
   }
 }
 @media only screen and (min-width: 1200px) {
-            /*Desktop Styles*/
+  /*Desktop Styles*/
+  /**Base Styles**/
+  .content-wrapper {
+    padding: 0px 100px;
+  }
+  nav ul li {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.875em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  /**Home**/
+  #hero-area h1 {
+    font-size: 3.75em;
+  }
+  .form-description, .sign-up {
+    width: 30%;
+    padding: 50px 100px;
+  }
+  #features h1, #reviews h1 {
+    font-size: 2.5em;
+  }
+  #features article {
+    flex-basis: 33%;
+  }
+  /**About**/
+  .contact-info {
+    width: 33%;
+  }
 }
 
 /* ==========================================================================
